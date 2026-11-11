@@ -14,7 +14,7 @@ const team = [
   ["Art director / images", "Claude writes prompts; GPT image generation via Codex CLI", "All illustrations and the prompt log"],
   ["3D scout", "Claude subagent", "Free .glb models with licences and credits"],
   ["Web builder", "Claude subagent", "This site: Vite + React + TypeScript + Tailwind v4 + shadcn/ui"],
-  ["QA", "Claude subagent (cheap tier)", "Word count, link check, requirement checklist, mobile check"],
+  ["QA", "Claude (coordinator) + headless Chrome", "Word count, live link check, 3D model loading, mobile layout check"],
   ["Music", "Strudel (live-coded pattern)", "Background loop, toggled with the button in the corner"],
 ]
 
@@ -27,6 +27,7 @@ const libs = [
   ["react-markdown + remark-gfm", "Rendering story and notes", "MIT"],
   ["@google/model-viewer", "3D models", "Apache-2.0"],
   ["Strudel", "Background music, loaded from CDN at runtime", "AGPL-3.0"],
+  ["pretext (chenglou/pretext)", "Home page: text reflowing live around the drifting coils, no DOM measurement", "MIT"],
   ["lucide-react", "Icons", "ISC"],
   ["Google Fonts: Fraunces, Literata, Inter", "Typography", "OFL"],
 ]

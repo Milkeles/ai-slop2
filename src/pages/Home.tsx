@@ -9,8 +9,28 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { SITE, imageCaptions, parts } from "@/data/story"
 import { wordCount } from "@/lib/text"
+import { CoilField } from "@/components/CoilField"
 
 const mds = [p1, p2, p3]
+
+const WORLD_INTRO =
+  "Above the small town of Limeburn sits Cutter's Bowl, a flooded limestone quarry that only gives up its secrets in a drought. This August the water is the lowest since 1979, and on a newly bare ledge lies the Coil: an ammonite fossil whose spiral glows faintly. Every time a friend presses a palm to it, a new fold grows in their brain, and with it a power: seeing seconds ahead, hearing the echoes of old words, perfect balance, light that looks solid. Nobody tells them where the folds come from, or who is paying."
+
+// The opening of Part I (story text only: no headings, image markers or pull quotes), about 220 words.
+function opening(md: string, maxWords = 220) {
+  const out: string[] = []
+  let n = 0
+  for (const para of md.split(/\n\s*\n/)) {
+    const t = para.trim()
+    if (!t || t.startsWith("#") || t.startsWith("[[") || t.startsWith(">")) continue
+    out.push(t)
+    n += t.split(/\s+/).length
+    if (n >= maxWords) break
+  }
+  return out.join("\n\n") + " …"
+}
+
+const WORLD_TEXT = `${WORLD_INTRO}\n\nFROM PART I\n\n${opening(p1)}`
 
 const extras = [
   { href: "characters.html", title: "Characters", text: "Ines, Dobri, Tavi and the keeper of the Weighhouse.", icon: Users },
@@ -38,17 +58,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-12">
-        <h2 className="text-2xl font-semibold text-amber-glow">The world</h2>
-        <div className="prose-story mt-4 !max-w-none">
-          <p>
-            Above the small town of Limeburn sits Cutter's Bowl, a flooded limestone quarry that only gives up its secrets
-            in a drought. This August the water is the lowest since 1979, and on a newly bare ledge lies the Coil: an
-            ammonite fossil whose spiral glows faintly. Every time a friend presses a palm to it, a new fold grows in their
-            brain, and with it a power: seeing seconds ahead, hearing the echoes of old words, perfect balance, light that
-            looks solid. Nobody tells them where the folds come from, or who is paying.
+      <section className="mx-auto max-w-5xl px-4 py-12" aria-labelledby="world">
+        <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+          <h2 id="world" className="text-2xl font-semibold text-amber-glow">The world</h2>
+          <p className="font-sans text-xs text-muted-foreground">
+            Drag the coils. The text reflows around them live, laid out by{" "}
+            <a className="underline underline-offset-2 hover:text-foreground" href="https://github.com/chenglou/pretext">pretext</a>.
           </p>
         </div>
+        <CoilField text={WORLD_TEXT} />
       </section>
 
       <section className="mx-auto max-w-6xl px-4" aria-labelledby="chapters">
