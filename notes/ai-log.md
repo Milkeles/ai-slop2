@@ -13,3 +13,6 @@ Short dated entries: what we asked, which alternative we chose and why, what fai
   4. Part I: the Coil's ledge now sits right under the end of the gantry, so "Where it came up, it gets broken" points to the gantry.
   5. Part III: Ines's foresight now goes blank only after she closes her eyes in the Fold. Before that, Pell warns her it will.
   Rejected: none. A few small trims elsewhere kept the total at 4,353 words.
+- Images: 10 images generated with OpenAI image generation through two parallel Codex CLI runs (5 each). Every prompt reused the bible's character/location visual lines verbatim plus one shared style line. Result: the characters stay recognisable from the cover to the climax scene. All 10 were usable on the first try.
+- 3D models: no free ammonite or portable cassette recorder model was found in time, so a nautilus shell and a boombox with a cassette deck (Poly Pizza, CC BY 3.0) stand in for them.
+- Stack change mid-project: plain HTML → Vite + React + shadcn/ui (multi-page build, so every page is still its own HTML file), plus Strudel background music written as code.

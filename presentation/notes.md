@@ -16,8 +16,8 @@ Tell it; don't read it. Keep the site open and click along in the same order as 
 ## 3. Characters and locations (1 min) — Characters and Locations pages
 - 3 friends + 1 antagonist; 3 locations: the quarry, the Weighhouse museum and the Fold (a world inside the brain).
 - Each power is tied to a real brain region, which made the images and the 3D brain easy to explain.
-- One prompt that worked: **[fill in after looking at the images: e.g. the Fold landscape]**.
-- One that failed and what I changed: **[fill in: e.g. a portrait that came out too old or with text in it]**.
+- What worked: copying each character's visual description word for word into every prompt. Ines's yellow windbreaker, Dobri's headphones and green cardigan, and Tavi's knee brace look the same in the cover, the portraits and the gantry scene.
+- What didn't: the 3D models. There was no free ammonite or cassette recorder, so a nautilus shell and a boombox stand in for them. **[add your own: an image you'd redo, and why]**
 
 ## 4. How I used AI (1.5 min) — Making-of page
 - I wrote the idea; I didn't let one AI do everything. A team of AI agents, each with one job:
