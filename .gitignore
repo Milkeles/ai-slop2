@@ -1,0 +1,27 @@
+
+*~
+public/assets/raw/
+dist
+dist-ssr
+.DS_Store
+# Editor directories and files
+.idea
+lerna-debug.log*
+*.local
+*.log
+logs
+# Logs
+*.njsproj
+node_modules
+node_modules/
+npm-debug.log*
+*.ntvs*
+pnpm-debug.log*
+*.sln
+*.suo
+*.sw?
+*.swp
+.vscode/*
+!.vscode/extensions.json
+yarn-debug.log*
+yarn-error.log*
