@@ -10,14 +10,14 @@ const STRUDEL_SRC = "https://unpkg.com/@strudel/web@1.2.8/dist/index.js"
 export const TUNE = `setcps(0.42)
 stack(
   // bass: the slow "thinking" pulse
-  note("<c2 ab1 f1 g1>").s("sawtooth").lpf(500).gain(0.6).attack(0.05).release(0.6),
+  note("<c3 ab2 f2 g2>").s("sawtooth").lpf(1400).gain(0.9).attack(0.05).release(0.6),
   // arpeggio: neurons firing
   note("<[c4 eb4 g4 bb4]*2 [ab3 c4 eb4 g4]*2 [f3 ab3 c4 eb4]*2 [g3 b3 d4 f4]*2>")
-    .s("triangle").gain(0.35).delay(0.35).room(0.6),
+    .s("triangle").gain(0.75).delay(0.35).room(0.6),
   // high bell: a new fold forming
-  note("<g5 ~ eb5 ~> ~ <c6 bb5> ~").s("sine").gain(0.22).room(0.8).slow(2),
+  note("<g5 ~ eb5 ~> ~ <c6 bb5> ~").s("sine").gain(0.5).room(0.8).slow(2),
   // hi-hat made of white noise
-  s("white*8").gain("0.07 0.03").decay(0.04).sustain(0)
+  s("white*8").gain("0.16 0.07").decay(0.04).sustain(0)
 )`
 
 type StrudelWindow = Window & {
